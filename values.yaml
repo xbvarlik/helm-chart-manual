@@ -1,0 +1,13 @@
+﻿image:
+  repository: barisvarlik.azurecr.io/pipeline-demo-calc
+  name: CalculatorImage
+  tag: latest
+  pullPolicy: Always
+replicaCount: 2
+port: 8080
+connections:
+  sql: null
+  cosmos: null
+  mongoDb: null
+  blobStorage: null
+  redis: null

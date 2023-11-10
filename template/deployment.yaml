@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: {{ include "app.fullname" . }}
+  spec:
+    replicas: {{ .Values.replicaCount }}
+    selector:
+      matchLabels:
+        app: {{ template "app.fullname" . }}
+    template:
+      metadata:
+        labels:
+          app: {{ template "app.fullname" . }}
+      spec:
+        containers:
+          - name: {{ .Chart.name }}
+            image: {{ printf "%s/%s:%s" .Values.image.repository .Values.image.name .Values.image.tag }}
+            ports:
+              - containerPort: {{ .Values.port | default 8080 }}
