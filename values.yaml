@@ -1,7 +1,9 @@
 ﻿image:
-  repository: barisvarlik.azurecr.io/pipeline-demo-calc
-  name: CalculatorImage
+  repository: pipeline-demo-calc
   tag: latest
+  pullPolicy: Always
+  username: barisvarlik
+  password: 3ny/7se56pR6UeyhwBWVixzalrlAjYoXPD2e033y1E+ACRBs59Gn
   pullPolicy: Always
 replicaCount: 2
 port: 8080

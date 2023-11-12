@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ prinf "%s-ConfigMap" .Release.Namespace .}}
+  name: {{ printf "%s-ConfigMap" .Release.Namespace .}}
 data:
   connectionStrings:
     sql: {{ .Values.connections.sql }}

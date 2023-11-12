@@ -1,0 +1,8 @@
+{
+    "auths": {
+      "{{ .Values.image.repository }}": {
+        "username": "{{ .Values.image.username }}",
+        "password": "{{ .Values.image.password }}",
+      }
+    }
+  }
